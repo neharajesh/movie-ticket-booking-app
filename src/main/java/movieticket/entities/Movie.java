@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -32,8 +33,7 @@ public class Movie {
     private String language;
 
     @NotBlank
-    private String genre;
+    private Set<Tag> tags;
 
     //TODO: add cast, directed by, produced by and summary
-    //TODO: add validations
 }

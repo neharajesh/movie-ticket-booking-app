@@ -8,24 +8,15 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Data
-public class SignUpDTO {
+public class UpdateUserDTO {
     @NotBlank
-    @Size(min = 3, max = 45)
-    private String fullName;
-
-    @NotBlank
-    private String phoneNo;
-
-    @NotBlank
-    private Integer age;
-
-    @NotBlank
-    @Email
-    private String email;
+    @Size(min = 3, max = 15)
+    private String username;
 
     @NotBlank
     @Size(min = 3, max = 15)
-    private String password;
+    @Email
+    private String email;
 
     private Set<String> role;
 }
